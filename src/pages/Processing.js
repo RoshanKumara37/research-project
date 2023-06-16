@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Scan from "../img/scan.png";
 import { useNavigate } from "react-router-dom";
+
 function Processing() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Calculate 5000ms -> 5 seconds
+    const timeout = setTimeout(() => {
+      // Navigate to server page
+      navigate("/server-data");
+    }, 5000);
+
+    // Clean up the timeout when the component unmounts
+    return () => clearTimeout(timeout);
+  }, [navigate]);
+
   return (
     <div>
-      <div class="scan-animation">
-        <div class="scanning-text">Scanning...</div>
-        <img src={Scan} class="scanning-arrow"></img>
+      <div className="scan-animation">
+        <div className="scanning-text">Scanning...</div>
+        <img src={Scan} className="scanning-arrow" alt="Scanning Arrow" />
         <button
           onClick={() => navigate("/")}
           style={{
