@@ -1,3 +1,4 @@
+/* Home Page Styles */
 .background-container {
   background-image: url("./img/BG_img.png");
   background-size: cover;
@@ -25,4 +26,52 @@
   width: 250px;
   height: 100px;
   font-weight: 800;
+}
+/* Form Page Styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-data-centered {
+  display: flex;
+  height: 80vh;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+/* Form Page Styles */
+.scan-animation {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: scanAnimation 2s infinite;
+}
+
+.scanning-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.scanning-arrow {
+  animation: arrowRotation 2s infinite linear;
+}
+
+@keyframes arrowRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
