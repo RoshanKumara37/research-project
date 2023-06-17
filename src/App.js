@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Form from "./pages/Form";
 import Processing from "./pages/Processing";
 import ServerData from "./pages/ServerData";
+import FinalData from "./pages/FinalData";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/form" element={<Form />}></Route>
         <Route path="/processing" element={<Processing />}></Route>
         <Route path="/server-data" element={<ServerData />}></Route>
+        <Route path="/final-data" element={<FinalData />}></Route>
       </Routes>
     </>
   );
